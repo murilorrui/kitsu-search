@@ -1,0 +1,47 @@
+@import ../../assets/style/mobileFirst
+@import ../../assets/style/grid
+
+.character-card
+  width: 300px
+  border: 5px solid rgba(255, 255, 255, 0.4)
+  cursor: pointer
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12)
+  &__content
+    display: flex
+    position: relative
+  &:hover
+    box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.7), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12)
+  &__character-details
+    height: 100% !important
+    transition: all 1s ease
+  &__character
+    position: absolute
+    width: 290px
+    padding: 12px
+    display: flex
+    bottom: 0
+    color: #fff
+    height: 90px
+    flex-flow: column
+    background: linear-gradient(360deg, rgba(1, 29, 64, .9), transparent)
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    &__name
+      text-align: center
+      font-size: 22px
+      font-weight: bold
+      width: 200px
+      margin-top: 12px
+      +media-min-md
+        opacity: .7
+    &__description
+      text-align: center
+      transition: all 1s ease
+      opacity: 0
+      height: 0px
+  &__avatar
+    height: 300px
+    width: 290px
+  &__description
+    overflow: hidden

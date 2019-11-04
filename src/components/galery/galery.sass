@@ -1,0 +1,46 @@
+@import ../../assets/style/mobileFirst
+@import ../../assets/style/grid
+
+.galery
+  width: 100%
+  padding: 22px
+  justify-content: center
+  align-items: center
+  +media-min-md
+    overflow: auto
+    height: 450px
+  +media-min-xl
+    height: 470px
+  &__media
+    position: relative
+    margin: 12px
+    padding: 0px !important
+    display: flex
+    flex-direction: column
+  &__img
+    border-radius: 15px
+  &__content
+    position: absolute
+    width: 100%
+    border-radius: 15px
+    padding: 12px
+    display: flex
+    bottom: 0
+    color: #fff
+    height: 90px
+    flex-flow: column
+    background: linear-gradient(360deg, rgba(1, 29, 64, .9), transparent)
+    justify-content: center
+    align-items: center
+    overflow: hidden
+  &__name
+    text-align: center
+    font-size: 22px
+    font-weight: bold
+    width: 200px
+    margin-top: 12px
+    +media-min-sm
+      padding: 16px
+      font-size: 14px
+    +media-min-lg
+      font-size: 18px

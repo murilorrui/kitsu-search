@@ -1,0 +1,33 @@
+@import ./mobileFirst
+
+$col-gutter: 1%
+$col-columns: 12
+$col-max: 980px
+*
+  box-sizing: border-box
+
+////
+// Grids
+////
+[class*="col-"]
+  float: left
+  padding: 0 $col-gutter
+  margin-bottom: 20px
+
+@for $i from 1 through $col-columns
+  .col-#{$i}
+    width: 100%
+    +media-min-sm
+      width: 100% / $col-columns * $i
+
+.container
+  width: 100%
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+  +media-min-lg
+    width: 80%
+.row
+  display: flex
+  flex-wrap: wrap
